@@ -1,0 +1,104 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="css/myTest.css">
+<style>
+body, html {
+    height: 100%;
+    margin: 0;
+}
+</style>
+
+<script type="text/javascript">
+function setOptinPostion()
+{
+  var elem = document.getElementById("optin");
+  var leftValue =document.getElementById("leftMarginValue").value;
+  var topValue=document.getElementById("topMarginValue").value;
+  elem.style.left = leftValue;
+  elem.style.marginTop =topValue;
+  console.log(elem.style.left);
+}
+ 
+function moveRight()
+{
+var elem = document.getElementById("optin");
+elem.style.left = "950px";
+elem.style.width = "422px";
+}
+function moveLeft()
+{
+var elem = document.getElementById("optin");
+elem.style.left = "70px";
+}
+function moveCenter()
+{
+  var elem = document.getElementById("optin");
+  elem.style.marginTop ="250px";
+  elem.style.left = "500px";
+}
+function moveBottomRight()
+{
+  var elem = document.getElementById("optin");
+ elem.style.marginTop ="550px";
+elem.style.left = "950px";
+}
+function moveBottomLeft()
+{
+  var elem = document.getElementById("optin");
+ elem.style.marginTop ="550px";
+elem.style.left = "70px";
+}
+</script>
+</head>
+
+<body>
+<div class="bg"></div>
+<div class="pushcrew-chrome-style-notification pushcrew-chrome-style-notification-safari" id ="optin">
+  <div class="pushcrew-safari-notification-inner-wrapper">
+    <div class="pushcrew-notification-image-wrapper-safari">
+      <img src="https://cdn.pushcrew.com/img/logos/ed74bdf1c35aab34b7c9d26cc89b2d2e/d4e3089b-78bb-4a7a-911a-64ab88000238.png">
+    </div>
+    <div class="pushcrew-text-wrapper-safari">
+      <span class="pushcrew-notification-title-safari">
+        Neha Verma wants to send you notifications
+      </span>
+      <p class="pushcrew-notification-message-safari">
+        Only alerts relevant to your demo needs!!!
+      </p>
+    </div>
+    <div style="clear: both;">
+    <div class="pushcrew-button-wrapper">
+        <button class="pushcrew-chrome-style-notification-btn pushcrew-btn-close">
+            Don't Allow
+        </button>
+        <button class="pushcrew-chrome-style-notification-btn pushcrew-btn-allow">
+            Allow
+        </button>
+     </div>
+     <div style="clear:both">
+     </div>
+   </div>
+ </div>
+</div>
+<div>
+<button class ="pushcrew-chrome-style-notification-btnright" style ="margin-left: 260px" onclick="moveRight()"id ="rightSide"> Right </button>
+<button class ="pushcrew-chrome-style-notification-btnright" onclick="moveLeft()" id ="leftSide"> Left</button>
+<button class ="pushcrew-chrome-style-notification-btnright" onclick="moveCenter()" id ="moveCenter"> Center </button>
+<button class ="pushcrew-chrome-style-notification-btnright" onclick="moveBottomRight()" id ="moveBottomRight">Bottom Right </button>
+<button class ="pushcrew-chrome-style-notification-btnright" onclick="moveBottomLeft()" id ="moveBottomLeft">Bottom Left </button>
+
+<div class="pushcrew-text-wrapper-safari" >
+<div style ="margin-top:200px"><h1> <center>Customize By your Choice </center> </h1></div>
+
+<div class="pushcrew-text-wrapper-safari" >
+<center><label for="LeftMargin" style="font-size: 20px">Left Margin:</label>
+  <input type="text" name="leftValue" value="" id ="leftMarginValue"><br>
+<label for="topMargin"style="font-size: 20px">Top Margin:</label>
+<input type="text" name="leftValue" value="" id ="topMarginValue"><br>
+  <input type="submit" class ="pushcrew-chrome-style-notification-btnright" style = "margin-top: 50px"value="Submit" onclick="setOptinPostion()">
+  </div>
+  </div>
+</div>
+</body>
+</html>
